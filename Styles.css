@@ -825,4 +825,30 @@ footer .disclaimer {
   0%,100% { transform: rotate(0deg); }
   50% { transform: rotate(-1deg); }
 }
+@media (max-width: 768px) {
+  .wisdom {
+    padding: 2rem 1rem;
+  }
+
+  .wisdom-block {
+    padding: 1.5rem;
+    border-width: 1.5px;
+    box-shadow: 0 0 10px var(--clr-red);
+  }
+
+  .wisdom-block h3 {
+    font-size: 1.6rem;
+    text-shadow: 0 0 4px var(--clr-red);
+  }
+
+  .wisdom-block li {
+    font-size: 0.95rem;
+    padding-left: 1rem;
+  }
+
+  .wisdom-block li::before {
+    font-size: 0.9rem;
+    top: 0.1rem;
+  }
+}
 
