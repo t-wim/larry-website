@@ -1,36 +1,95 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>$LARRY – The Evil Never Sleeps</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$LARRY – Meme Chaos Protocol</title>
+  <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- HEADER -->
   <header>
     <div class="nav-logo">$LARRY</div>
     <nav>
       <a href="#lore">Lore</a>
       <a href="#gallery">Gallery</a>
-      <a href="#chart">Chart</a>
+      <a href="#contract">Chart</a>
     </nav>
-  </header>  <!-- HERO SECTION -->  <section class="hero">
-    <img src="images/larry-fullface.jpg" alt="Larry Hero" class="hero-img">
-    <h1 class="glitch-header" data-text="$Larry is watching.">$Larry is watching.</h1>
+  </header>
+
+  <section class="hero">
+    <h1 class="glitch-header" data-text="$LARRY">$LARRY</h1>
     <h2 class="subheading">Hide your Peenar – Larry smells weakness.</h2>
-    <p class="tagline">Enter the dimension of degeneracy, doom and divine meme cycles.</p>
+    <p>The most cursed meme protocol to ever haunt a blockchain.</p>
+    <img src="/images/larry-poster-red-bg.jpg" alt="Evil Larry" class="hero-img">
     <div class="buttons">
-      <button class="btn" onclick="copyContract()">Buy $LARRY</button>
-      <button class="wallet-btn" onclick="sacrificeWallet()">✴️ Sacrifice Wallet</button>
+      <button class="btn" onclick="sacrificeWallet()">✴️ Sacrifice Wallet</button>
+      <button class="ghost" onclick="document.getElementById('lore').scrollIntoView({behavior: 'smooth'})">Read Lore</button>
     </div>
-  </section>  <!-- CONTRACT + CHART SECTION -->  <section class="chart-section" id="chart">
-    <p class="ca-helper">Contract Address:</p>
-    <button class="ca-display" id="contract">HR4zerps4x92vXa5cP3fdRGpi2rP18A2CXMbZ7j1bonk</button>
-    <span class="ca-status" id="status">Copied!</span>
-    <div class="dex-chart">
-      <iframe src="https://dexscreener.com/solana/HR4zerps4x92vXa5cP3fdRGpi2rP18A2CXMbZ7j1bonk?embed=1" frameborder="0" width="100%" height="500" allowtransparency="true"></iframe>
+  </section>
+
+  <section class="chart-section" id="contract">
+    <p class="ca-helper">Click to copy Contract Address:</p>
+    <div class="ca-display" onclick="copyContract()">
+      <code id="contract">0xDEAD...C0DE</code>
+      <span class="ca-status" id="caStatus">Copied!</span>
     </div>
-  
+    <div class="dexscreener">
+      <iframe src="https://dexscreener.com/solana/LARRY" width="100%" height="400" style="border:0;"></iframe>
+    </div>
+  </section>
+
+  <section class="lore" id="lore">
+    <h2 class="lore-heading">The Lore of $LARRY</h2>
+    <div class="lore-block">
+      <p class="lore-title">Origins & Awakening</p>
+      <p>The meme ignited when an oriental-shorthair named Dexter transformed into “Larry”. Viral horror-style TikTok cuts crowned his fang-filled stare as pure villainy – fueled by a fan-story of witnessing his father's fall.</p>
+    </div>
+    <div class="lore-block">
+      <p class="lore-title">Rise of the Menace</p>
+      <p>Larry rose as mafia king of meme-monsters, ruling hench-cats, celebrating a tongue-in-cheek birthday (16 Dec 2016) and wielding the legendary “stare of doom”.</p>
+    </div>
+    <div class="lore-block">
+      <p class="lore-title">On-Chain Infamy</p>
+      <p>Crypto CT adopted him as the avatar of chaotic liquidity—aping for vibes, ignoring DYOR, and branding every dip “character development”. Today, $LARRY haunts all charts, proving evil can pump.</p>
+    </div>
+  </section>
+
+  <section class="wisdom" id="wisdom">
+    <div class="wisdom-block" id="wisdom-block">
+      <!-- Will be filled dynamically by JS -->
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="filters">
+      <button data-filter="All">All Sins</button>
+      <button data-filter="📉 Charts">📉 Charts</button>
+      <button data-filter="🔥 Onchain">🔥 Onchain</button>
+      <button data-filter="🧠 Tinfoil">🧠 Tinfoil</button>
+    </div>
+    <div class="carousel">
+      <button class="carousel-btn prev">‹</button>
+      <div class="carousel-track">
+        <!-- Meme cards are populated dynamically via JS -->
+      </div>
+      <button class="carousel-btn next">›</button>
+    </div>
+  </section>
+
+  <section class="ticker" id="larry-ticker">
+    <!-- Filled by JS with scrolling statements -->
+  </section>
+
+  <footer>
+    <div class="socials">
+      <a href="#">X</a>
+      <a href="#">Telegram</a>
+      <a href="#">Gitbook</a>
+    </div>
+    <div class="disclaimer">Not financial advice. Only eternal judgment.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
