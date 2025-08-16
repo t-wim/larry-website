@@ -1,295 +1,256 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="$LARRY - Der böse Meme-Coin-Cat. Pure Chaos auf der Blockchain. Join the dark side of DeFi.">
-    <meta name="keywords" content="LARRY, Meme Coin, Solana, Crypto, Evil Cat, Blockchain">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="$LARRY - Meme Chaos Protocol">
-    <meta property="og:description" content="Hide your Peenar – Larry smells weakness. The evil cat that rugs charts for sport.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-domain.com">
-    <meta property="og:image" content="https://your-domain.com/images/larry-og.jpg">
-    <meta property="og:site_name" content="$LARRY Token">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="$LARRY - Meme Chaos Protocol">
-    <meta name="twitter:description" content="The evil cat that haunts all charts">
-    <meta name="twitter:image" content="https://your-domain.com/images/larry-og.jpg">
-    
-    <title>$LARRY – Meme Chaos Protocol</title>
-    
-    <!-- Favicon und App Icons -->
-    <link rel="icon" type="image/x-icon" href="/fav-icon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/fav-icon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/fav-icon/favicon-32x32.png">
-    
-    <!-- Android Chrome Icons -->
-    <link rel="icon" type="image/png" sizes="192x192" href="/fav-icon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/fav-icon/android-chrome-512x512.png">
-    
-    <!-- Apple Touch Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/fav-icon/apple-touch-icon.png">
-    
-    <!-- Web App Manifest -->
-    <link rel="manifest" href="/fav-icon/site.webmanifest">
-    
-    <!-- Theme Colors -->
-    <meta name="theme-color" content="#FFD700">
-    <meta name="msapplication-TileColor" content="#FFD700">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <meta
+    name="description"
+    content="$LARRY – Der böse Meme-Coin-Cat. Pure Chaos auf der Blockchain. Join the dark side of DeFi."
+  />
+  <meta
+    name="keywords"
+    content="LARRY, Meme Coin, Solana, Crypto, Evil Cat, Blockchain"
+  />
+  <meta name="robots" content="index, follow" />
+  <title>$LARRY – Meme Chaos Protocol</title>
+
+  <!-- Favicon & App Icons -->
+  <link rel="icon" type="image/x-icon" href="/fav-icon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/fav-icon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/fav-icon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/fav-icon/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/fav-icon/android-chrome-512x512.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/fav-icon/apple-touch-icon.png" />
+  <link rel="manifest" href="/fav-icon/site.webmanifest" />
+  <meta name="theme-color" content="#FFD700" />
+  <meta name="msapplication-TileColor" content="#FFD700" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Creepster&family=Orbitron:wght@400;700;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Custom Overlay System -->
-    <div id="custom-overlay" class="overlay-backdrop" aria-hidden="true" role="dialog">
-        <div class="overlay-container">
-            <button class="overlay-close" type="button" aria-label="Overlay schließen">&times;</button>
-            <div class="overlay-content">
-                <div class="overlay-image"></div>
-                <div class="overlay-text">
-                    <h3 class="overlay-title"></h3>
-                    <p class="overlay-message"></p>
-                </div>
-            </div>
+  <!-- Custom Overlay System -->
+  <div
+    id="custom-overlay"
+    class="overlay-backdrop"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+  >
+    <div class="overlay-container">
+      <button class="overlay-close" type="button" aria-label="Overlay schließen">&times;</button>
+      <div class="overlay-content">
+        <div class="overlay-image" aria-hidden="true"></div>
+        <div class="overlay-text">
+          <h3 class="overlay-title"></h3>
+          <p class="overlay-message"></p>
         </div>
+      </div>
     </div>
+  </div>
 
-    <header>
-        <div class="nav-logo">$LARRY 🩸</div>
-        <nav role="navigation" aria-label="Hauptnavigation">
-            <a href="#hero" tabindex="0">Home</a>
-            <a href="#chart-section" tabindex="0">Contract</a>
-            <a href="#lore" tabindex="0">Lore</a>
-            <a href="#gallery" tabindex="0">Memes</a>
-        </nav>
-    </header>
+  <header>
+    <div class="nav-logo">$LARRY 🩸</div>
+    <nav role="navigation" aria-label="Hauptnavigation">
+      <a href="#hero" tabindex="0">Home</a>
+      <a href="#chart-section" tabindex="0">Contract</a>
+      <a href="#lore" tabindex="0">Lore</a>
+      <a href="#gallery" tabindex="0">Memes</a>
+    </nav>
+  </header>
 
-    <main>
-        <section id="hero" class="hero">
-            <img 
-                src="/images/larry.jpg" 
-                alt="Larry der böse Kater - Hauptcharakter des $LARRY Meme Coins" 
-                class="hero-img"
-                loading="eager"
-                width="280"
-                height="280"
-            >
-            <h1 class="glitch-header" data-text="$LARRY IS EVIL. DEAL WITH IT.">
-                $LARRY IS EVIL. DEAL WITH IT.
-            </h1>
-            <p>Hide your Peenar – Larry smells weakness.<br>
-               Your TA is invalid. Larry already drew the W and shorted your sanity.</p>
-            
-            <div class="buttons">
-                <a href="#lore" class="btn" tabindex="0" role="button">FALL DOWN THE LORE-HOLE</a>
-                <button 
-                    class="wallet-btn" 
-                    onclick="sacrificeWallet()" 
-                    type="button"
-                    aria-label="Wallet-Opfer-Funktion aktivieren"
-                >
-                    ✴️ Sacrifice Wallet
-                </button>
-            </div>
-        </section>
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <img
+        src="/images/larry.jpg"
+        alt="Larry der böse Kater – Hauptcharakter des $LARRY Meme Coins"
+        class="hero-img"
+        loading="eager"
+        width="280"
+        height="280"
+      /><br>
+      <h1
+        class="glitch-header"
+        data-text="$LARRY IS EVIL. DEAL WITH IT."
+      >
+        $LARRY IS EVIL. DEAL WITH IT.
+      </h1>
+      <p>
+        Hide your Peenar – Larry smells weakness.<br />
+        Your TA is invalid. Larry already drew the W and shorted your sanity.
+      </p>
 
-     <section id="chart-section" class="chart-section">
-    <h2 class="section-title sr-only">Contract Information</h2>
-    <div class="ca-helper">📜 Contract Address</div>
-    <p class="ca-helper">Tap / click to copy</p>
-    <button 
-        class="ca-display" 
-        onclick="copyContract()" 
+      <div class="buttons">
+        <a href="#lore" class="btn" tabindex="0" role="button">FALL DOWN THE LORE-HOLE</a>
+        <button
+          class="wallet-btn"
+          onclick="sacrificeWallet()"
+          type="button"
+          aria-label="Wallet-Opfer-Funktion aktivieren"
+        >
+          ✴️ Sacrifice Wallet
+        </button>
+      </div>
+    </section>
+
+    <!-- Contract / Chart -->
+    <section id="chart-section" class="chart-section">
+      <h2 class="section-title sr-only">Contract Information</h2>
+      <div class="ca-helper">📜 Contract Address</div>
+      <p class="ca-helper">Tap / click to copy</p>
+      <button
+        class="ca-display"
+        onclick="copyContract()"
         type="button"
         aria-label="Contract-Adresse in Zwischenablage kopieren"
         tabindex="0"
-    >
+      >
         HR4zerps4x92vXa5cP3fdRGpi2rP18A2CXMbZ7j1bonk
         <span class="ca-status" role="status" aria-live="polite">✔️ Copied!</span>
-    </button>
+      </button>
+
     <div class="chart-embed-container">
-    <iframe 
-        src="https://dexscreener.com/solana/HR4zerps4x92vXa5cP3fdRGpi2rP18A2CXMbZ7j1bonk?embed=1&theme=dark&trades=0"
-        style="border: none;"
-        width="100%"
-        height="600"
-        loading="lazy"
+      <iframe
+        src="https://dexscreener.com/solana/HR4zerps4x92vXa5cP3fdRGpi2rP18A2CXMbZ7j1bonk?embed=1&theme=dark&view=chart"
+        style="border:none; width:100%; height:100vh;"
+        loading="eager"   
         allowfullscreen
-    ></iframe>
-</div>
-</section>
-
-        <section id="lore" class="lore">
-            <h2 class="lore-heading">The Lore of $LARRY</h2>
-            
-            <article class="lore-block">
-                <h3 class="lore-title">Origins & Awakening</h3>
-                <p>Larry was born Dexter, a vanilla cat—until a midnight gas-fee spike shattered his tiny kitty innocence.</p>
-                <p>Now he rugs charts for sport.</p>
-                <p>The meme began when viral TikTok edits turned Dexter's fang-filled stare into pure villainy.</p>
-            </article>
-
-            <article class="lore-block">
-                <h3 class="lore-title">Rise of the Menace</h3>
-                <p>He devoured wicks under support, regurgitated into resistance, and drank CT tears.</p>
-                <p>You funded his next sardine steak.</p>
-                <p>Larry rose as mafia king of meme-monsters..ruling hench-cats</p>
-                <p>and wielding his legendary "stare of doom".</p>
-            </article>
-
-            <article class="lore-block">
-                <h3 class="lore-title">On-Chain Infamy</h3>
-                <p>When Solana stops for maintenance, Larry prints green candles.</p>
-                <p>A 100x "soon™"..same energy as stopping clawing the sofa.</p>
-                <p>CT adopted him as the avatar of chaotic liquidity-aping for vibes</p>
-                <p>and branding every dip "character development".</p>
-                <p>Now, $LARRY haunts all charts -proving evil can pump.</p>
-            </article>
-        </section>
-
-        <section class="wisdom">
-            <div class="wisdom-buttons" role="tablist" aria-label="Wisdom Kategorien">
-                <button 
-                    class="wisdom-btn" 
-                    data-wisdom="0" 
-                    role="tab"
-                    aria-selected="false"
-                    aria-controls="wisdom-block"
-                    tabindex="0"
-                >
-                    Degenerate Wisdom
-                </button>
-                <button 
-                    class="wisdom-btn" 
-                    data-wisdom="1" 
-                    role="tab"
-                    aria-selected="false"
-                    aria-controls="wisdom-block"
-                    tabindex="0"
-                >
-                    Bullish Lore
-                </button>
-                <button 
-                    class="wisdom-btn" 
-                    data-wisdom="2" 
-                    role="tab"
-                    aria-selected="false"
-                    aria-controls="wisdom-block"
-                    tabindex="0"
-                >
-                    Pump Psychology
-                </button>
-            </div>
-            <div 
-                id="wisdom-block" 
-                class="wisdom-block" 
-                role="tabpanel"
-                aria-labelledby="active-wisdom-tab"
-            ></div>
-        </section>
-
-     <!-- === OPTIMIERTE GALLERY SECTION === -->
-<section id="gallery" class="gallery">
-    <h2 class="section-title sr-only">Larry Meme Galerie</h2>
-    
-    <!-- Beschreibungstext für bessere UX -->
-    <div class="gallery-intro">
-        <p>Swipe, click oder nutze die Pfeiltasten um durch Larry's böse Galerie zu navigieren.</p>
+        title="Dexscreener – $LARRY Chart">
+      </iframe>
     </div>
-    
-    <!-- Optimierte Carousel Struktur -->
-    <div class="carousel" role="region" aria-label="Larry Bilder Karussell" tabindex="0">
-        <!-- Navigation Buttons werden durch JavaScript eingefügt -->
-        <!-- Track Container wird durch JavaScript eingefügt -->  
-        <!-- Indicators werden durch JavaScript eingefügt -->
-    </div>
-    
-    <!-- Carousel Controls Info für Accessibility -->
-    <div class="carousel-controls-info sr-only" aria-live="polite">
-        Verwende die Pfeiltasten oder Swipe-Gesten zur Navigation. 
-        Leertaste pausiert/startet die automatische Wiedergabe.
-        Home-Taste springt zum ersten Bild, End-Taste zum letzten.
-    </div>
-    
-    <!-- Zusätzliche Gallery Informationen -->
-    <div class="gallery-footer">
-        <p class="gallery-stats">
-            <span class="gallery-count">${totalImages} böse Larry Momente</span>
-            <span class="gallery-separator"> • </span>
-            <span class="gallery-auto-play">Auto-Play: <span id="autoplay-status">Aktiv</span></span>
-        </p>
-    </div>
-</section>
 
-<!-- Optional: Gallery Modal für Vollbild-Ansicht -->
-<div id="gallery-modal" class="gallery-modal" aria-hidden="true" role="dialog" aria-label="Vollbild Galerie">
-    <div class="gallery-modal-backdrop" tabindex="-1"></div>
-    <div class="gallery-modal-content">
-        <button class="gallery-modal-close" type="button" aria-label="Vollbild schließen">
-            <span aria-hidden="true">&times;</span>
+    </section>
+
+    <!-- Lore -->
+    <section id="lore" class="lore">
+      <h2 class="lore-heading">The Lore of $LARRY</h2>
+
+      <article class="lore-block">
+        <h3 class="lore-title">Origins &amp; Awakening</h3>
+        <p>Larry was born Dexter, a vanilla cat — until a midnight gas-fee spike shattered his tiny kitty innocence.</p>
+        <p>Now he rugs charts for sport.</p>
+        <p>The meme began when viral TikTok edits turned Dexter's fang-filled stare into pure villainy.</p>
+      </article>
+
+      <article class="lore-block">
+        <h3 class="lore-title">Rise of the Menace</h3>
+        <p>He devoured wicks under support, regurgitated into resistance, and drank CT tears.</p>
+        <p>You funded his next sardine steak.</p>
+        <p>Larry rose as mafia king of meme-monsters, ruling hench-cats</p>
+        <p>and wielding his legendary "stare of doom".</p>
+      </article>
+
+      <article class="lore-block">
+        <h3 class="lore-title">On-Chain Infamy</h3>
+        <p>When Solana stops for maintenance, Larry prints green candles.</p>
+        <p>A 100x “soon™” — same energy as stopping clawing the sofa.</p>
+        <p>CT adopted him as the avatar of chaotic liquidity-aping for vibes</p>
+        <p>and branding every dip "character development".</p>
+        <p>Now, $LARRY haunts all charts — proving evil can pump.</p>
+      </article>
+    </section>
+
+    <!-- Wisdom -->
+    <section class="wisdom">
+      <div class="wisdom-buttons" role="tablist" aria-label="Wisdom Kategorien">
+        <button
+          class="wisdom-btn"
+          data-wisdom="0"
+          role="tab"
+          aria-selected="false"
+          aria-controls="wisdom-block"
+          tabindex="0"
+        >
+          Degenerate Wisdom
         </button>
-        <div class="gallery-modal-image-container">
-            <img class="gallery-modal-image" src="" alt="" loading="lazy">
-        </div>
-        <div class="gallery-modal-caption">
-            <h3 class="gallery-modal-title"></h3>
-            <p class="gallery-modal-description"></p>
-        </div>
-        <div class="gallery-modal-nav">
-            <button class="gallery-modal-prev" type="button" aria-label="Vorheriges Bild">‹</button>
-            <button class="gallery-modal-next" type="button" aria-label="Nächstes Bild">›</button>
-        </div>
+        <button
+          class="wisdom-btn"
+          data-wisdom="1"
+          role="tab"
+          aria-selected="false"
+          aria-controls="wisdom-block"
+          tabindex="0"
+        >
+          Bullish Lore
+        </button>
+        <button
+          class="wisdom-btn"
+          data-wisdom="2"
+          role="tab"
+          aria-selected="false"
+          aria-controls="wisdom-block"
+          tabindex="0"
+        >
+          Pump Psychology
+        </button>
+      </div>
+      <div
+        id="wisdom-block"
+        class="wisdom-block"
+        role="tabpanel"
+        aria-labelledby="active-wisdom-tab"
+      ></div>
+    </section>
+
+    <!-- Meme Gallery (Void Style) -->
+    <!-- ✱ HTML: Ersetze NUR den Inhalt der Gallery-Section -->
+<section id="gallery" class="gallery void-gallery" aria-label="Larry Meme Schrein">
+  <h2 class="section-title sr-only">Larry Meme Galerie</h2>
+  <div id="void-albums" class="void-albums" role="list"></div>
+</section>
+
+  </main>
+
+  <!-- News Ticker -->
+  <div id="larry-ticker" role="marquee" aria-label="Larry News Ticker"></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="socials">
+      <a
+        href="https://twitter.com/larrycoin"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Larry auf Twitter folgen (neues Fenster)"
+      >
+        Community
+      </a>
+      <a
+        href="https://knowyourmeme.com/larry"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Larry Meme auf Know Your Meme (neues Fenster)"
+      >
+        KnowYourMeme
+      </a>
+      <a
+        href="https://dexscreener.com/solana/larry"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Larry Chart auf Dexscreener (neues Fenster)"
+      >
+        Dexscreener
+      </a>
     </div>
-</div>
-    </main>
+    <p class="disclaimer">
+      $LARRY is a memecoin. Nothing here is financial advice. DYOR or embrace the curse.
+    </p>
+  </footer>
 
-    <div id="larry-ticker" role="marquee" aria-label="Larry News Ticker"></div>
-
-    <footer>
-        <div class="socials">
-            <a 
-                href="https://twitter.com/larrycoin" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label="Larry auf Twitter folgen (neues Fenster)"
-            >
-                Twitter Community
-            </a>
-            <a 
-                href="https://knowyourmeme.com/larry" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label="Larry Meme auf Know Your Meme (neues Fenster)"
-            >
-                KnowYourMeme
-            </a>
-            <a 
-                href="https://dexscreener.com/solana/larry" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label="Larry Chart auf Dexscreener (neues Fenster)"
-            >
-                Dexscreener
-            </a>
-        </div>
-        <p class="disclaimer">
-            $LARRY is a memecoin. Nothing here is financial advice. DYOR or embrace the curse.
-        </p>
-    </footer>
-
-    <script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
